@@ -1,10 +1,10 @@
  <?php
 
     // MySQL database constants
-    $username = "root";
-    $password = "sometimesiwonderaboutentropy";
+    $username = "username here";
+    $password = "password here";
     $host = "localhost";
-    $dbname = "publickey_test";
+    $dbname = "database name here";
 
     // Set database options to use UTF-8 
     $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
