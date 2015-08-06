@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>PGP Login Page</title>
+
+<!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script src="js/scripts.js"></script>
+	 
+<!-- CSS -->
+    <link href="css/style.css" rel="stylesheet"></link>
+ 
+</head>
+<body>
+
+<!-- Markup for encryption step forms -->
+<form action="pgpvalidator.php" method="post" form id="loginform" class="loginform">
+<ul>
+	<li>
+		<h2>PGP Login Form</h2>
+	</li>
+	
+	<li>
+		<label for="nick">Nickname (optional)</label>
+		<input type="text" name="nick" placeholder="John Doe">
+	</li>
+	<li>
+		<label for="publickey">Public Key</label>
+		<textarea rows="10" cols="50" name="publickey" id="publickey" placeholder="Paste your full public key here"></textarea>
+	</li>
+	<li>
+		<button class="submit" type="submit">Submit Form</button>
+	</li>
+</ul>
+</form>
+
+<!-- Markup for decryption step forms -->
+<div id="returned">
+<form action="pgpvalidator.php" method="post" form id="responseform" class="responseform">
+<ul>	
+	<li>
+		<h2>PGP Login Form</h2>
+	</li>
+	<li>
+		<label for="encmessage">Encrypted Message</label>
+		<textarea rows="10" cols="50" name="encmessage" id="encmessage" placeholder="Copy the encrypted message from this form into your favorite pgp program and decrypt with your key"></textarea>
+	</li>
+	
+	<li>
+		<label for="decmessage">Decrypted Message</label>
+		<textarea rows="10" cols="50" name="decmessage" id="decmessage" placeholder="Paste the decrypted message text into this box"></textarea>
+	</li>
+	<li>
+		<button class="submit" type="submit">Submit Form</button>
+	</li>
+	
+</ul>
+</form>
+</div>
+
+</body>
+</html>
